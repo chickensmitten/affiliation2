@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141210030718) do
+ActiveRecord::Schema.define(version: 20141211074845) do
 
   create_table "ahoy_events", force: true do |t|
     t.uuid     "visit_id"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 20141210030718) do
   add_index "ahoy_events", ["time"], name: "index_ahoy_events_on_time"
   add_index "ahoy_events", ["user_id"], name: "index_ahoy_events_on_user_id"
   add_index "ahoy_events", ["visit_id"], name: "index_ahoy_events_on_visit_id"
+
+  create_table "bounties", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", force: true do |t|
     t.text     "description"

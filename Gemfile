@@ -13,6 +13,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '~> 3.0.6'
 gem 'ahoy_matey'
 gem 'activeuuid', '>= 0.5.0'
+gem 'cocoon'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
